@@ -5,50 +5,22 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import AppTopBar from './components/AppBar';
+import { Home, About } from './pages';
 
 export default function App() {
   return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="">Home</Link>
-          </li>
-          <li>
-            <Link to="about">About</Link>
-          </li>
-          <li>
-            <Link to="dashboard">Dashboard</Link>
-          </li>
-        </ul>
-
-        <hr />
-      </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
-    </Router>
-  );
-}
-
-// You can think of these components as "pages"
-// in your app.
-
-function Home() {
-  return (
     <div>
-      <h2>Home</h2>
+      <AppTopBar/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </Router>
     </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
+    
   );
 }
 
