@@ -1,37 +1,59 @@
-import { Paper, Button } from "@mui/material"
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
 import Carousel from "react-material-ui-carousel"
 
 export default function CollectionsCarousel() {
-  var items = [
+  const items = [
     {
-      name: "Random Name #1",
-      description: "Probably the most random thing you have ever seen!"
+      title: 'Four Corners Vintage (4C)',
+      image: `${process.env.PUBLIC_URL}/static/collections/4c_featured.png`,
+      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut imperdiet ornare augue, et venenatis leo. 
+        Donec gravida dolor ut facilisis dignissim. Donec sagittis augue odio, ac laoreet leo egestas eget. 
+        Duis vulputate urna sed sem iaculis dignissim. Donec feugiat mollis eleifend. In hac habitasse platea dictumst.`,
     },
     {
-      name: "Random Name #2",
-      description: "Hello World!"
-    }
+      title: 'Blank',
+      image: `${process.env.PUBLIC_URL}/static/collections/blank.png`,
+      description: `Nulla euismod nunc a pellentesque hendrerit. Aliquam et velit ut ex suscipit blandit sit amet nec turpis. 
+        Nunc justo sem, rutrum ut nisl pellentesque, dictum varius magna. Donec sit amet elementum nibh. 
+        Phasellus arcu leo, condimentum eget turpis vitae, commodo pharetra erat. `,
+    },
   ];
 
   return (
-    <Carousel>
-      {
-        items.map( (item, i) => <Item key={i} item={item} /> )
-      }
+    <Carousel swipe={false}>
+      {items.map((item, i) => <Item key={i} item={item} />)}
     </Carousel>
   )
 }
 
-function Item(props: any)
-{
-  return (
-    <Paper>
-      <h2>{props.item.name}</h2>
-      <p>{props.item.description}</p>
+interface ItemProps {
+  item: {
+    title: string,
+    image: string,
+    description: string,
+  },
+}
 
-      <Button className="CheckButton">
-        Check it out!
-      </Button>
-    </Paper>
-  )
+function Item(props: ItemProps) {
+  return (
+    <Card sx={{ maxWidth: 600 }}>
+      <CardMedia
+        component="img"
+        alt={props.item.image}
+        image={props.item.image}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {props.item.title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {props.item.description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
 }
