@@ -36,7 +36,7 @@ interface ItemProps {
 
 function Item(props: ItemProps) {
   return (
-    <Card sx={{ maxWidth: 600 }}>
+    <Card sx={{ maxWidth: 600, margin: "auto" }}>
       <CardMedia
         component="img"
         alt={props.item.image}
