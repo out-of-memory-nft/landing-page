@@ -1,19 +1,19 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link, AppBar, Box, Toolbar, IconButton } from '@mui/material';
 
 export default function AppTopBar() {
   return (
     <Box>
       <AppBar position="static">
         <Toolbar>
-          <Box sx={{ flexBasis: "100%", flexGrow: 1 }}>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Box sx={{ flexBasis: "100%", flexGrow: 1, display: "flex" }}>
+            <Link to="/" color="inherit" underline="none" sx={{ marginLeft: "10px" }} component={RouterLink}>
               OutOfMemoryNFT
-            </Typography>
+            </Link>
+            <Link to="/four-corners-vintage" color="inherit" underline="none" sx={{ marginLeft: "10px" }} component={RouterLink}>
+              4C Vintage
+            </Link>
           </Box>
           <Box sx={{ flexBasis: "100%", flexGrow: 1, display: "flex", justifyContent: "center" }}>
             <IconButton>
