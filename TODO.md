@@ -6,3 +6,5 @@
 * Add theme
 * Add outofmemory icon
 * Fix carousel size bug
+* Fix homepage app bar does not have shadow
+* Add indicator under app bar links to reflect which page you are in
