@@ -4,7 +4,6 @@
 * Add homepage description
 * Add banner with retangular aspect ratio
 * Add opensea links on carousel item
-* Add theme
 * Add outofmemory icon
 * Fix carousel size bug
 
