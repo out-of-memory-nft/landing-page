@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Link, AppBar, Box, Toolbar, IconButton, Typography } from '@mui/material';
+import { Link, AppBar, Box, Toolbar, IconButton, Typography, Tooltip } from '@mui/material';
 
 export default function AppTopBar() {
   return (
@@ -17,11 +17,13 @@ export default function AppTopBar() {
             </Link>
           </Box>
           <Box sx={{ flexBasis: "100%", flexGrow: 1, display: "flex", justifyContent: "center", alignItems: 'center' }}>
-            <IconButton>
-              <a href='https://opensea.io/' title="Buy on OpenSea" rel='noreferrer' target='_blank' style={{ width: '45px', height: '45px' }}>
-                <img alt="OpenSeaIcon" src="https://storage.googleapis.com/opensea-static/Logomark/Logomark-Transparent%20White.svg" style={{ width: '100%' }}/>
-              </a>
-            </IconButton>
+            <Tooltip title='View OutOfMemoryNFT on OpenSea'>
+              <IconButton>
+                <a href='https://opensea.io/OutOfMemoryException' title="Buy on OpenSea" rel='noreferrer' target='_blank' style={{ width: '45px', height: '45px' }}>
+                  <img alt="OpenSeaIcon" src="https://storage.googleapis.com/opensea-static/Logomark/Logomark-Transparent%20White.svg" style={{ width: '100%' }}/>
+                </a>
+              </IconButton>
+            </Tooltip>
           </Box>
           <Box sx={{ flexBasis: "100%", flexGrow: 1 }}>
           </Box>
