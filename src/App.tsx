@@ -19,7 +19,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/four-corners-vintage" element={<FourCorners />} />
+          <Route path="/collections/four-corners-vintage" element={<FourCorners />} />
         </Routes>
       </Router>
     </ThemeProvider>
