@@ -1,9 +1,8 @@
 # TODO
 
 ## MVP
-* Add banner with retangular aspect ratio
-* Add opensea links on carousel item
-* Add outofmemory icon
+* Add outofmemory icon in AppBar
+* Add icon next to Home name title
 * Style AppBar links
 * Fix carousel size bug
 
@@ -14,6 +13,7 @@
 
 ## Eventually
 * Add generic collection page
+* Featured carousel use real images and not a banner
 
 # Description Ideas
 
