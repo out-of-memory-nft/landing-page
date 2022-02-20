@@ -8,6 +8,7 @@ export default function AppTopBar() {
       <AppBar position="static">
         <Toolbar>
           <Box sx={{ flexBasis: "100%", flexGrow: 1, display: "flex" }}>
+          {/* <Avatar alt="OutOfMemoryIcon" src={`${process.env.PUBLIC_URL}/static/outofmemory/out_of_memory_icon_black.png`} /> */}
             <Link to="/" color="inherit" underline="none" sx={{ marginLeft: "10px" }} component={RouterLink}>
               OutOfMemoryNFT
             </Link>
