@@ -11,7 +11,7 @@ export default function AppTopBar() {
             <Link to="/" color="inherit" underline="none" sx={{ marginLeft: "10px" }} component={RouterLink}>
               OutOfMemoryNFT
             </Link>
-            <Link to="/four-corners-vintage" color="inherit" underline="none" sx={{ marginLeft: "10px" }} component={RouterLink}>
+            <Link to="/collections/four-corners-vintage" color="inherit" underline="none" sx={{ marginLeft: "10px" }} component={RouterLink}>
               4C Vintage
             </Link>
           </Box>
