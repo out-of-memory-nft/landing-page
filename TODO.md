@@ -1,10 +1,10 @@
 # TODO
 
 ## MVP
-* Add homepage description
 * Add banner with retangular aspect ratio
 * Add opensea links on carousel item
 * Add outofmemory icon
+* Style AppBar links
 * Fix carousel size bug
 
 ## Nice to have
