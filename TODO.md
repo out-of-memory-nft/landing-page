@@ -1,19 +1,17 @@
 # TODO
 
 ## MVP
-* Add outofmemory icon in AppBar
-* Add icon next to Home name title
-* Style AppBar links
-* Fix carousel size bug
+* Four Corners page real design process
 
 ## Nice to have
 * Add indicator under app bar links to reflect which page you are in
-* Fix homepage app bar does not have shadow
 * Add Tooltip over OpenSea icon
+* Page describing each technique
 
 ## Eventually
 * Add generic collection page
 * Featured carousel use real images and not a banner
+* Fix homepage app bar does not have shadow
 
 # Description Ideas
 
