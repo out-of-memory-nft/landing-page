@@ -2,10 +2,11 @@
 
 ## MVP
 * Four Corners page real design process
+* Add "Available on open sea" in four corners page
+* Use real description on carousel
 
 ## Nice to have
 * Add indicator under app bar links to reflect which page you are in
-* Add Tooltip over OpenSea icon
 * Page describing each technique
 
 ## Eventually
