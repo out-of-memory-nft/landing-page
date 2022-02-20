@@ -5,7 +5,7 @@ import { Link as RouterLink } from 'react-router-dom';
 export default function CollectionsCarousel() {
   const items = [
     {
-      title: 'Four Corners Vintage (4C)',
+      title: 'Four Corners Vintage',
       openSeaTarget: 'collection/4-corners-vintage',
       learnMore: '/collections/four-corners-vintage',
       image: `${process.env.PUBLIC_URL}/static/collections/4c_banner.png`,
@@ -44,7 +44,7 @@ interface ItemProps {
 function Item(props: ItemProps) {
   return (
     <Card sx={{ maxWidth: 600, margin: "auto" }}>
-      <CardHeader title={props.item.title} titleTypographyProps={{ variant:'h4', align: 'center' }}/>
+      <CardHeader sx={{ backgroundColor: 'primary.main' }} title={props.item.title} titleTypographyProps={{ variant:'h4', align: 'center', sx: { color: 'common.white' }}}/>
       <CardMedia
         component="img"
         alt={props.item.image}
