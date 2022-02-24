@@ -1,14 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Container, Paper, Typography, Box, Stack, CircularProgress } from "@mui/material";
 
-import * as pageService from '../services/page-service';
-
-interface PageData {
-  title: string,
-  image: string,
-  summary: string,
-  techniques: string[],
-}
+import pageService, { PageData } from '../services/page-service';
 
 export default function FourCorners() {
   const [data, setData] = useState<PageData | null>(null);
