@@ -2,6 +2,7 @@
 
 ## MVP
 * Add "Available on open sea" in four corners page
+* Change famicon and page title
 
 ## Nice to have
 * Add indicator under app bar links to reflect which page you are in
