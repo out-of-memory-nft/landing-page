@@ -1,7 +1,6 @@
 # TODO
 
 ## MVP
-* Add "Available on open sea" in four corners page
 
 ## Nice to have
 * Add indicator under app bar links to reflect which page you are in
