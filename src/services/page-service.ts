@@ -23,13 +23,13 @@ export interface PageData {
 }
 
 async function getPageData(name: string): Promise<any> {
-  const res = await axios.get(`/static/pages/${name}.json`);
+  const res = await axios.get(`${process.env.PUBLIC_URL}/static/pages/${name}.json`);
 
   return res.data;
 }
 
 async function getAllPagesData(): Promise<any[]> {
-  const responses = await Promise.all(pages.map(page => axios.get(`/static/pages/${page}.json`)));
+  const responses = await Promise.all(pages.map(page => axios.get(`${process.env.PUBLIC_URL}/static/pages/${page}.json`)));
 
   return responses.map(res => res.data);
 }
