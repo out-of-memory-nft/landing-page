@@ -16,6 +16,7 @@ export interface SummaryData {
 
 export interface PageData {
   title: string,
+  openSeaTarget: string,
   image: string,
   summary: string,
   techniques: string[],
