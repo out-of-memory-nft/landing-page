@@ -19,7 +19,7 @@ export default function AppTopBar() {
           <Box sx={{ flexBasis: "100%", flexGrow: 1, display: "flex", justifyContent: "center", alignItems: 'center' }}>
             <Tooltip title='View OutOfMemoryNFT on OpenSea'>
               <IconButton>
-                <a href='https://opensea.io/OutOfMemoryException' title="Buy on OpenSea" rel='noreferrer' target='_blank' style={{ width: '45px', height: '45px' }}>
+                <a href='https://opensea.io/OutOfMemoryNFT' title="Buy on OpenSea" rel='noreferrer' target='_blank' style={{ width: '45px', height: '45px' }}>
                   <img alt="OpenSeaIcon" src="https://storage.googleapis.com/opensea-static/Logomark/Logomark-Transparent%20White.svg" style={{ width: '100%' }}/>
                 </a>
               </IconButton>
