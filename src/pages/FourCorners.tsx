@@ -66,27 +66,26 @@ export default function FourCorners() {
         
         <Typography align='justify' width='100%'>
           We still generate four gradients with randomize colors but starting from a single corner, rotate each one by a
-          multiple of 90 degrees, resulting in four different images with a gradient on each corner.
-        </Typography>
-        
-        <Typography align='justify' width='100%'>
-          As minting lots of NFTs is not a simple task, we started simple by manually minting a small
-          amount of them. As we created few artwork, we needed something to make them special, this is where the golden border and
-          vintage concept arise.
+          multiple of 90 degrees, resulting in four different images with a gradient on each corner:
         </Typography>
 
-        <Typography align='justify' width='100%'>
-          Wrapping everything up, we had those following image layers:
-        </Typography>
         <Stack direction='row' spacing={2} sx={{ marginTop: '20px', marginBottom: '10px' }}>
-          {[0,1,2,3,4].map((id) => {
+          {[0,1,2,3].map((id) => {
             return renderLayer(`4c_p${id}`, { key: id });
           })}
         </Stack>
         {renderSubtitle('Individual corner gradient layers rotated by "Rotation" building block')}
         
         <Typography align='justify' width='100%'>
-          When we combine all of them with a black background, they'd look like the following image:
+          As minting lots of NFTs is not a simple task, we started simple by manually minting a small
+          amount of them. As we created few artwork, we needed something to make them special, this is where the golden border and
+          vintage concept arise.
+        </Typography>
+        {renderLayer('4c_p4', { marginTop: '30px', marginBottom: '10px' })}
+        {renderSubtitle('Golden border')}
+
+        <Typography align='justify' width='100%'>
+          Wrapping everything up, when we combine all of them with a black background, they'd look like the following image:
         </Typography>
         {renderLayer('4c_example', { marginTop: '30px', marginBottom: '10px' })}
         {renderSubtitle('Resulting image using "Layers" building block')}
