@@ -3,6 +3,7 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography, CardHead
 import Carousel from "react-material-ui-carousel"
 import { Link as RouterLink } from 'react-router-dom';
 
+import { default as AvailableOnOpenSea } from './AvailableOnOpenSea';
 import pageService, { SummaryData } from '../services/page-service';
 
 export default function CollectionsCarousel() {
@@ -43,10 +44,7 @@ function Item(item: SummaryData) {
         </Typography>
       </CardContent>
       <CardActions sx={{ minHeight: '60px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
-        <a href={`https://opensea.io/${item.openSeaTarget}`} title="Buy on OpenSea" rel='noreferrer' target='_blank'>
-          <img style={{ height: '60px', borderRadius: '5px', boxShadow: '0px 1px 6px rgba(0, 0, 0, 0.25)'}} src="https://storage.googleapis.com/opensea-static/Logomark/Badge%20-%20Available%20On%20-%20BW.png" alt="Available on OpenSea" />
-        </a>
-
+        <AvailableOnOpenSea target={item.openSeaTarget} />
         <Button variant='contained' size='large' to={item.learnMore} component={RouterLink}>Learn More</Button>
       </CardActions>
     </Card>
