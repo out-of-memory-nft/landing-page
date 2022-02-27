@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from '@mui/material/styles';
 
+import './App.css';
 import AppTopBar from './components/AppBar';
 import { Home, About } from './pages';
 import FourCorners from "./pages/FourCorners";
