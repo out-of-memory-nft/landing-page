@@ -29,7 +29,7 @@ export default function Block(props: BlockProps) {
 
   return (
     <Component {...block.properties}>
-      {block.content.map(blockId => <Block id={blockId} />)}
+      {block.content.map(blockId => <Block key={blockId} id={blockId} />)}
     </Component>
   );
 }

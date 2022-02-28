@@ -1,7 +1,6 @@
 import { registerBlock } from '../services/block-service';
 
 const staticUuids = [
-  '1d99ac24-65ae-410d-bf75-d83fc6a12f15',
   '38f0ac4f-d17c-4ea1-ac41-f6002a2afbbf',
   '0ce0eb27-52c9-417c-9835-d729c8049588',
   'bd717c36-6ffb-4523-b6d3-17acce44f8bc',
@@ -26,7 +25,7 @@ const blocks = [
     properties: {},
     content: [
       '12133a9a-3d9f-4b61-bd5c-bf4d05718869',
-      '5df82f2a-2c0f-454c-9de3-f363fae61627',
+      '1d99ac24-65ae-410d-bf75-d83fc6a12f15',
       'ede68c8c-904f-4250-942c-3d10fa66904f',
     ],
   },
@@ -37,6 +36,17 @@ const blocks = [
       text: 'Four Corners Vintage'
     },
     content: [],
+  },
+  {
+    id: '1d99ac24-65ae-410d-bf75-d83fc6a12f15',
+    type: 'paper',
+    properties: {
+      elevation: 3,
+      padding: '5px',
+      width: '75%',
+      backgroundColor: 'black',
+    },
+    content: ['5df82f2a-2c0f-454c-9de3-f363fae61627'],
   },
   {
     id: '5df82f2a-2c0f-454c-9de3-f363fae61627',
