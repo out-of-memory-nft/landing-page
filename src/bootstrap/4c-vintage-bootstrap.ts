@@ -1,7 +1,7 @@
 import { registerBlock } from '../services/block-service';
 
 const staticUuids = [
-  '38f0ac4f-d17c-4ea1-ac41-f6002a2afbbf',
+  
   '0ce0eb27-52c9-417c-9835-d729c8049588',
   'bd717c36-6ffb-4523-b6d3-17acce44f8bc',
   '5924407a-a55e-4ea6-85b5-c34c5e0c1954',
@@ -26,7 +26,7 @@ const blocks = [
     content: [
       '12133a9a-3d9f-4b61-bd5c-bf4d05718869',
       '1d99ac24-65ae-410d-bf75-d83fc6a12f15',
-      'ede68c8c-904f-4250-942c-3d10fa66904f',
+      '38f0ac4f-d17c-4ea1-ac41-f6002a2afbbf',
     ],
   },
   {
@@ -59,10 +59,21 @@ const blocks = [
     content: [],
   },
   {
+    id: '38f0ac4f-d17c-4ea1-ac41-f6002a2afbbf',
+    type: 'paper',
+    properties: {
+      elevation: 3,
+      padding: '10px',
+      margin: '10px',
+    },
+    content: ['ede68c8c-904f-4250-942c-3d10fa66904f'],
+  },
+  {
     id: 'ede68c8c-904f-4250-942c-3d10fa66904f',
     type: 'text',
     properties: {
-      text: 'Four Corners Vintage starts with a black filled background where four randomized colors at each corner starts and gently fades away as far as you go from it creating a gradient effect which is them framed by a nice and beautiful golden border.',
+      text: '*Four Corners Vintage starts with a black filled background where four randomized colors at each corner starts and gently fades away as far as you go from it creating a gradient effect which is them framed by a nice and beautiful golden border.*',
+      margin: '10px 0',
     },
     content: [],
   },
