@@ -1,14 +1,35 @@
-import { getBlock } from './registry';
+import { useState, useEffect } from 'react';
 
-export interface BlockProps {
+import { getBlock } from './registry';
+import * as blockService from '../../services/block-service';
+
+export interface BlockModel {
   id: string,
   type: string,
   properties: Record<string, any>,
-  // content: string[],
+  content: string[],
+}
+
+interface BlockProps {
+  id: string,
 }
 
 export default function Block(props: BlockProps) {
-  const Component = getBlock(props.type);
+  const [block, setBlock] = useState<BlockModel | null>(null);
 
-  return <Component {...props.properties} />
+  useEffect(() => {
+    blockService.getBlock(props.id).then(blockData => setBlock(blockData));
+  }, [props.id, setBlock]);
+
+  if (!block) {
+    return <div>Loading</div>;
+  }
+
+  const Component = getBlock(block.type);
+
+  return (
+    <Component {...block.properties}>
+      {block.content.map(blockId => <Block id={blockId} />)}
+    </Component>
+  );
 }

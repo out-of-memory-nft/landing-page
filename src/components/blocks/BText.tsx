@@ -7,7 +7,6 @@ interface BTextProps {
 
 const BText = (props: BTextProps): JSX.Element => {
   return <Typography component={ReactMarkdown}>{props.text}</Typography>
-  // return <ReactMarkdown>{props.text}</ReactMarkdown>
 }
 
 export default BText;

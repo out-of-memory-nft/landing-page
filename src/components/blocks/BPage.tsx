@@ -1,16 +1,13 @@
-import { Block } from "./blocks";
 import { Container } from '@mui/material';
 
-interface GenericPageProps {
-  id: string,
+interface BPageProps {
+  children: JSX.Element[],
 }
 
-export default function GenericPage(props: GenericPageProps) {
-
-
+export default function BPage(props: BPageProps) {
   return (
     <Container maxWidth="md" sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Block id={props.id} />
+      {props.children}
     </Container>
   );
 }
