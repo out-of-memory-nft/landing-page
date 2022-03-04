@@ -101,7 +101,24 @@ export default function FourCorners() {
           OutOfMemory NFT team.
         </Typography>
       </Box>
-      <Box sx={{ width: '100%', height: '200px' }} />
+      <Box sx={{ width: '100%', height: '100px' }} />
+
+      <Box sx={{ alignSelf: 'flex-start'}}>
+        <Typography sx={{ margin: '20px 0 20px 0' }}>
+          View launch event on:
+        </Typography>
+        <Stack direction='row' spacing={2} sx={{ marginTop: '20px', marginBottom: '10px' }}>
+          <a href='https://nftcalendar.io/event/four-corners-vintage-by-outofmemorynft/' title="View on NFTCalendar" rel='noreferrer' target='_blank'>
+            <Box
+              component='img'
+              src={`${process.env.PUBLIC_URL}/static/marketing/nft-calendar.png`}
+              sx={{ width: '150px' }}
+            />
+          </a>
+        </Stack>
+      </Box>
+
+      <Box sx={{ width: '100%', height: '50px' }} />
     </Container>
   );
 }
