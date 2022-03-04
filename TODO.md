@@ -27,3 +27,6 @@ Type text
 - should kind (body, h1, h2) be configurable?
 - should margin and paging be configurable?
 - should alignment be configurable?
+
+## Editable blocks thoughts
+- How to separate visual(html tags) from logic(markdown)?

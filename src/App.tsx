@@ -13,6 +13,7 @@ import { Home, About } from './pages';
 import FourCorners from "./pages/FourCorners";
 import { theme } from './theme';
 import GenericPage from "./components/GenericPage";
+import DraftjsPage from './components/DraftjsPage';
 
 const pages = [
   {
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/collections/four-corners-vintage" element={<FourCorners />} />
           <Route path='/generic' element={<GenericPage id={pages[0].blockId} />}/>
+          <Route path='/draft' element={<DraftjsPage />}/>
         </Routes>
       </Router>
     </ThemeProvider>
