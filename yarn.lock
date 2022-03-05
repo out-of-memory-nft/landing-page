@@ -1109,6 +1109,13 @@
   dependencies:
     postcss-value-parser "^4.2.0"
 
+"@draft-js-plugins/drag-n-drop@^4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@draft-js-plugins/drag-n-drop/-/drag-n-drop-4.2.1.tgz#df107cc3d107d8fc11edc13890a70472db6ae720"
+  integrity sha512-vcuY5PabzPPperFV8M+dajhvY6mlP1V7h6Vt0by9BttQTWHOgNnJlD9if3v+Ug39mh80J/cAuGwuV50pg3whZA==
+  dependencies:
+    immutable "~3.7.4"
+
 "@draft-js-plugins/editor@^4.1.2":
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/@draft-js-plugins/editor/-/editor-4.1.2.tgz#a6ad358051aa5a4475cba217a5222d1f0f885338"
@@ -1116,6 +1123,14 @@
   dependencies:
     immutable "~3.7.4"
     prop-types "^15.8.1"
+
+"@draft-js-plugins/focus@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@draft-js-plugins/focus/-/focus-4.1.2.tgz#4ea65cd54988c5605f657b08d04f3479dffa7ee8"
+  integrity sha512-1jiQiJEeYZbaAkHPEw+IDl5ye19NGASfc4dz8Tedrb6zYJbr0sQpSp3IACdJ424TciMhecyPsAKIflTE7yScOQ==
+  dependencies:
+    clsx "^1.0.4"
+    immutable "~3.7.4"
 
 "@emotion/babel-plugin@^11.3.0", "@emotion/babel-plugin@^11.7.1":
   version "11.7.2"
@@ -4405,7 +4420,7 @@ cliui@^7.0.2:
     strip-ansi "^6.0.0"
     wrap-ansi "^7.0.0"
 
-clsx@^1.1.1:
+clsx@^1.0.4, clsx@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
   integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==

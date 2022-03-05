@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import Draft, {EditorState, ContentState, RichUtils, Modifier, KeyBindingUtil, ContentBlock } from 'draft-js';
-import Editor, { EditorPlugin } from '@draft-js-plugins/editor';
+import Editor, { EditorPlugin, composeDecorators } from '@draft-js-plugins/editor';
 import 'draft-js/dist/Draft.css'
 import Immutable from 'immutable';
 import { Typography } from '@mui/material';
+import createBlockDndPlugin from '@draft-js-plugins/drag-n-drop';
+import createFocusPlugin from '@draft-js-plugins/focus';
 
 function CustomH2(props: any) {
   return <Typography>{props.children}</Typography>
@@ -13,21 +15,8 @@ const blockRenderMap = Immutable.Map({
   'header-two': {
     element: 'h2',
     wrapper: <CustomH2 />,
-  }
+  },
 });
-
-function blockRendererFn(contentBlock: Draft.ContentBlock) {
-  const type = contentBlock.getType();
-  if (type === 'h2') {
-    return {
-      component: CustomH2,
-      editable: false,
-      props: {
-        foo: 'bar',
-      },
-    };
-  }
-}
 
 const extendedBlockRenderMap = Draft.DefaultDraftBlockRenderMap.merge(blockRenderMap);
 
@@ -130,17 +119,6 @@ const CodeSpan = (props: any) => {
   );
 };
 
-const compositeDecorator = new Draft.CompositeDecorator([
-  // {
-  //   strategy: entityInlineCodeBlockStrategy,
-  //   component: CodeSpan,
-  // },
-  // {
-  //   strategy: inlineCodeBlockTrigger,
-  //   component: CodeSpan,
-  // }
-]);
-
 const createCodeBlockPlugin = (config?: any): EditorPlugin => {
   return {
       decorators: [
@@ -156,10 +134,97 @@ const createCodeBlockPlugin = (config?: any): EditorPlugin => {
   }
 }
 
+function CustomTypography(props: any) {
+  return <p>abc</p>
+}
+
+const createBlockDragAndDropPlugin = (config?: any): EditorPlugin => {
+  let Block = CustomTypography
+  if (config.decorator) {
+    Block = config.decorator(CustomTypography);
+  }
+
+  return {
+    blockRendererFn: (block, { getEditorState }) => {
+
+      if (block.getType() === 'drag') {
+        const contentState = getEditorState().getCurrentContent();
+        const entity = block.getEntityAt(0);
+        if (!entity) return null;
+        const type = contentState.getEntity(entity).getType();
+        if (type === 'drag' || type === 'drag') {
+          return {
+            component: Block,
+            editable: false,
+          };
+        }
+        return null;
+      }
+
+      return null;
+    },
+  };
+}
+
+
+const initialState = {
+  entityMap: {},
+  blocks: [
+    {
+      key: '9gm3s',
+      text:
+        'You can have images in your text field which are draggable. Hover over the image press down your mouse button and drag it to another position inside the editor.',
+      type: 'unstyled',
+      depth: 0,
+      inlineStyleRanges: [],
+      entityRanges: [],
+      data: {},
+    },
+    {
+      key: '5sh2s',
+      text:
+        'Lorem `ipsum dolor sit amet, consectetur adipiscing elit.` In non metus quis odio mattis elementum vel maximus elit. Morbi dignissim ex sapien, convallis aliquet magna rhoncus sed',
+      type: 'drag',
+      depth: 0,
+      inlineStyleRanges: [],
+      entityRanges: [],
+      data: {},
+    },
+  ],
+}
+
+const dragAndDropPlugin = createBlockDndPlugin();
+const focusPlugin = createFocusPlugin();
+
+const decorator = composeDecorators(
+  dragAndDropPlugin.decorator,
+  focusPlugin.decorator
+);
+
+function blockRendererFn(contentBlock: Draft.ContentBlock) {
+  const type = contentBlock.getType();
+  if (type === 'h2') {
+    return {
+      component: CustomH2,
+      editable: false,
+      props: {
+        foo: 'bar',
+      },
+    };
+  }
+}
+
+const compositeDecorator = new Draft.CompositeDecorator([
+  // {
+  //   strategy: entityInlineCodeBlockStrategy,
+  //   component: CodeSpan,
+  // },
+]);
+
 export default function DraftjsPage() {
   const [editorState, setEditorState] = useState(
     () => EditorState.createWithContent(
-        ContentState.createFromText('Lorem ipsum `dolor sit` amet, consectetur adipiscing elit. Nam eu fermentum turpis. Morbi lorem nisi, elementum ac pellente'),
+        Draft.convertFromRaw(initialState),
         compositeDecorator,  
       ),
   );
@@ -198,7 +263,7 @@ export default function DraftjsPage() {
     } else if (command === 'create-entity') {
       const contentStateWithEntity = editorState
         .getCurrentContent()
-        .createEntity('CODE', 'MUTABLE', { abc: 'def' });
+        .createEntity('drag', 'MUTABLE', { abc: 'def' });
       const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
 
       const modified = Modifier.replaceText(
@@ -224,9 +289,10 @@ export default function DraftjsPage() {
     editorState={editorState}
     // blockRenderMap={extendedBlockRenderMap}
     blockRendererFn={blockRendererFn}
+    // decorators=
     handleKeyCommand={handleKeyCommand}
     keyBindingFn={keyBindingsFn}
     onChange={setEditorState}
-    plugins={[createCodeBlockPlugin() as any]}
+    plugins={[createCodeBlockPlugin() as any, createBlockDragAndDropPlugin({ decorator: decorator })]}
   />;
 }
