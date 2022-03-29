@@ -1,11 +1,17 @@
 import { addBlock } from './registry';
-import BPage from './BPage';
-import BText from './BText';
-import BH2 from './BH2';
-import BImage from './BImage';
-import BPaper from './BPaper';
-import BContainer from './BContainer';
-import BSubtitle from './BSubtitle';
+import BPage from './generic/BPage';
+import BText from './generic/BText';
+import BH2 from './generic/BH2';
+import BImage from './generic/BImage';
+import BPaper from './generic/BPaper';
+import BContainer from './generic/BContainer';
+import BSubtitle from './generic/BSubtitle';
+import BStack from './generic/BStack';
+import BBox from './generic/BBox';
+
+import {
+  BAvailableOnOpenSea,
+} from './custom';
 
 export { default as Block } from './Block';
 export type { BlockModel } from './Block';
@@ -17,3 +23,7 @@ addBlock('image', BImage);
 addBlock('paper', BPaper);
 addBlock('container', BContainer);
 addBlock('subtitle', BSubtitle);
+addBlock('stack', BStack);
+addBlock('box', BBox);
+
+addBlock('available-on-open-sea', BAvailableOnOpenSea);
