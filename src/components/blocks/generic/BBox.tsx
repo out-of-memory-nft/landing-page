@@ -5,6 +5,7 @@ interface BBoxProps {
   children: JSX.Element[],
   width?: string,
   height?: string,
+  margin?: string,
   flex?: {
     direction?: string,
     alignSelf?: string,
@@ -17,6 +18,7 @@ const BBox = (props: BBoxProps): JSX.Element => {
     display: 'flex',
     width: props.width,
     height: props.height,
+    margin: props.margin,
     flexDirection: props.flex?.direction,
     alignSelf: props.flex?.alignSelf,
     alignItems: props.flex?.alignItems,

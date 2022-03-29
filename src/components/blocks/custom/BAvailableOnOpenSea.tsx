@@ -1,6 +1,6 @@
 
 interface OpenSeaProps {
-  target: string
+  target: string,
 }
 
 const BAvailableOnOpenSea = (props: OpenSeaProps) => {
