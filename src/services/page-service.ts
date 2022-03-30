@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const pages = [
   '4corners',
+  'lywaves'
 ];
 
 export interface PageData {
