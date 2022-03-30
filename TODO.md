@@ -5,12 +5,15 @@
 ## Nice to have
 * Add indicator under app bar links to reflect which page you are in
 * Page describing each technique
+* Absolute import files
+* CI/CD to publish page
 
 ## Eventually
 * Add generic collection page
 * Featured carousel use real images and not a banner
 * Fix homepage app bar does not have shadow
 * Fix typescript typing for page data 
+* Loading indicador for blocks
 
 # Description Ideas
 * Art using programming languages
@@ -18,3 +21,9 @@
 * Evolution, starting simple and incrementing
 * Join us in this journey
 * Implementing and applying techniques like blend, layer, rotation, scale -> page explaining each one
+
+## Generic Block thoughts
+Type text
+- should kind (body, h1, h2) be configurable?
+- should margin and paging be configurable?
+- should alignment be configurable?
