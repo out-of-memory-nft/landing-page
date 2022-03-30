@@ -1,4 +1,4 @@
-import { Block } from "./blocks";
+import { Block } from "../components/blocks";
 import { Container } from '@mui/material';
 
 interface GenericPageProps {

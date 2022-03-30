@@ -4,10 +4,10 @@ import Carousel from "react-material-ui-carousel"
 import { Link as RouterLink } from 'react-router-dom';
 
 import { default as AvailableOnOpenSea } from './AvailableOnOpenSea';
-import pageService, { SummaryData } from '../services/page-service';
+import pageService, { PageData } from '../services/page-service';
 
 export default function CollectionsCarousel() {
-  const [items, setItems] = useState<SummaryData[] | null>(null);
+  const [items, setItems] = useState<PageData[] | null>(null);
 
   useEffect(() => {
     pageService.getAllPagesData().then((pages) => setItems(pages));
@@ -28,7 +28,7 @@ export default function CollectionsCarousel() {
   )
 }
 
-function Item(item: SummaryData) {
+function Item(item: PageData) {
   return (
     <Card sx={{ maxWidth: 600, margin: "auto" }}>
       <CardHeader sx={{ backgroundColor: 'primary.main' }} title={item.title} titleTypographyProps={{ variant:'h4', align: 'center', sx: { color: 'common.white' }}}/>
@@ -45,7 +45,7 @@ function Item(item: SummaryData) {
       </CardContent>
       <CardActions sx={{ minHeight: '60px', display: 'flex', justifyContent: 'center', gap: '10px' }}>
         <AvailableOnOpenSea target={item.openSeaTarget} />
-        <Button variant='contained' size='large' to={item.learnMore} component={RouterLink}>Learn More</Button>
+        <Button variant='contained' size='large' to={`collections/${item.learnMore}`} component={RouterLink}>Learn More</Button>
       </CardActions>
     </Card>
   );
