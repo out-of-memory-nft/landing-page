@@ -10,6 +10,14 @@ const defaults = {
     width: '150px',
     height: 'auto',
   },
+  text: {
+    margin: '10px 0 0 0',
+    align: 'justify',
+  },
+  stack: {
+    direction: 'row',
+    spacing: 2,
+  }
 };
 
 export default defaults;
