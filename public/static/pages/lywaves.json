@@ -3,7 +3,7 @@
   "titleShort": "LYWaves",
   "openSeaTarget": "collection/lively-waves",
   "learnMore": "lively-waves",
-  "image": "/static/collections/4c_banner.png",
+  "image": "/static/collections/lively-waves/lywaves-banner.gif",
   "summary": "Lively Waves is an animated collection where a strong small colorful circle starts at the center and slowly grows until eventually fade out and a new one starts the infinite cicle. A small amount of special NFT contains a compelling golden animated border",
   "techniques": ["Pixel paint", "Color interpolation", "Layers", "Gif", "Circle", "Merge"],
   "blockId": "35c87213-1dd0-4483-8697-1e661bc7e92f"

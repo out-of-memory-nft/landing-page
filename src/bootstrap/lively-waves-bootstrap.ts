@@ -38,7 +38,7 @@ const blocks = [
     id: 'ca4303fb-caba-4fbc-9c49-5695d7881c68',
     type: 'image',
     properties: {
-      path: '/static/collections/4c_banner.png',
+      path: '/static/collections/lively-waves/lywaves-banner.gif',
       width: '100%',
       height: 'auto',
     },
@@ -76,9 +76,12 @@ const blocks = [
       'e5dbddb4-29f2-45ef-bd42-4b3479d647b3',
       '57d9cdcb-f665-4b7b-a6a7-f23aa4c30f69',
 
-      // stack
+      // Drawing circle
       '6c376dbc-1e75-44cf-b5a8-2fdce2bd3ac6',
       'ec27427e-eaf8-4af7-9a8a-2d822479fdac',
+      '31b9be57-de6f-49ae-92c4-908afcfe3922',
+      '76d1f0fa-ed45-4f1c-bc24-2a9fc9632987',
+      '23c94975-c1cf-4f73-a316-df93a60b3ad1',
 
       // circle
       '9f12e853-7566-41ef-a236-acc73279d075',
@@ -96,6 +99,11 @@ const blocks = [
       '5a9f730d-5fbc-430f-91ca-a1161f6ea46f',
       '041b624a-5cfe-473b-83a8-df973413a228',
 
+      // anti-aliased gif
+      '436182ae-4e68-40b3-9bc3-e58b3b601f85',
+      '2d980e23-602d-415b-8a4c-8f4c2eec554f',
+      'b6e89a31-af03-4284-a77b-42ab5c95ad82',
+
       // infinite loop
       '7990f5cf-bd2e-4a2c-b200-a0d18e069938',
       '61a9f43e-2a96-4bf4-9aa9-84df6e10e587',
@@ -105,12 +113,6 @@ const blocks = [
       'e48a4084-8304-4b09-8e66-0fa0544428f4',
       'ff054b8f-73b9-4b24-ae4d-bc9b6288a5f2',
       'e979afa9-899c-4ed6-9b59-3d1f0ddc736e',
-      '56740e01-624c-4135-a493-9aa6777c2312',
-      '2103a35d-0865-4d55-b295-011246a85b5d',
-      'f27ecb15-f17f-411c-bd6a-115bdc0fdf1f',
-      'c1a25c00-cc50-4984-9166-bca3fb3a33fc',
-      'ab70f989-9a59-47d6-9235-26cdeaecbcc2',
-      'a125b764-2668-46b8-b829-cde52501382f',
       '361edf94-416a-4543-aeb2-2135831e8dc3',
       '4ce7e597-2ad1-459d-9636-56a87b907504',
       '3dde8592-778b-4389-b965-8ad38bf9ab08',
@@ -148,21 +150,12 @@ const blocks = [
   },
   {
     id: '6c376dbc-1e75-44cf-b5a8-2fdce2bd3ac6',
-    type: 'stack',
-    properties: {
-      ...defaults.stack,
-    },
-    content: [
-      '85a7ad33-25ee-4f19-a72c-7a59ccc38da3',
-    ],
-  },
-  {
-    id: '85a7ad33-25ee-4f19-a72c-7a59ccc38da3',
     type: 'image',
     properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
-      width: defaults.image.width,
-      height: defaults.image.height,
+      path: '/static/collections/lively-waves/circle.png',
+      width: '80%',
+      height: 'auto',
+      margin: defaults.image.margin,
     },
     content: [],
   },
@@ -171,6 +164,35 @@ const blocks = [
     type: 'subtitle',
     properties: {
       text: 'Circle formula representation',
+      ...defaults.subtitle,
+    },
+    content: [],
+  },
+  {
+    id: '31b9be57-de6f-49ae-92c4-908afcfe3922',
+    type: 'text',
+    properties: {
+      text: 'The above formula only represents and draw the circle outline, as we want to fill in an unique color, we need to consider all pixels inside it with the formula: x² + y² <= r²',
+      ...defaults.text,
+    },
+    content: [],
+  },
+  {
+    id: '76d1f0fa-ed45-4f1c-bc24-2a9fc9632987',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/inside-circle.png',
+      width: '80%',
+      height: 'auto',
+      margin: defaults.image.margin,
+    },
+    content: [],
+  },
+  {
+    id: '23c94975-c1cf-4f73-a316-df93a60b3ad1',
+    type: 'subtitle',
+    properties: {
+      text: 'Outline and inside circle points formula representation',
       ...defaults.subtitle,
     },
     content: [],
@@ -263,7 +285,7 @@ const blocks = [
     id: 'de3c122c-a20e-45be-b351-2c577ecc2b35',
     type: 'text',
     properties: {
-      text: 'Using our **Layers* and newly **Gif** building block, we can generate an animated image by playing each layer at a fixed amount of time.',
+      text: 'Using our **Layers** and newly **Gif** building block, we can generate an animated image by playing each layer at a fixed amount of time.',
       ...defaults.text,
     },
     content: [],
@@ -272,8 +294,9 @@ const blocks = [
     id: '5a9f730d-5fbc-430f-91ca-a1161f6ea46f',
     type: 'image',
     properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
-      ...defaults.image,
+      path: '/static/collections/lively-waves/wave-no-anti-aliased.gif',
+      width: '300px',
+      margin: defaults.image.margin,
     },
     content: [],
   },
@@ -281,7 +304,35 @@ const blocks = [
     id: '041b624a-5cfe-473b-83a8-df973413a228',
     type: 'subtitle',
     properties: {
-      text: 'Animated NFT',
+      text: 'Single wave animated',
+      ...defaults.subtitle,
+    },
+    content: [],
+  },
+  {
+    id: '436182ae-4e68-40b3-9bc3-e58b3b601f85',
+    type: 'text',
+    properties: {
+      text: 'If we take a closer look, we can notice a rough edge on the circle because in high quality images, this kind of curved edge has a smooth color transition achieved by applying a technique called anti-aliasing. In order to achieve this, we simply generate a bigger image and resize it to the desired size:',
+      ...defaults.text,
+    },
+    content: [],
+  },
+  {
+    id: '2d980e23-602d-415b-8a4c-8f4c2eec554f',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/wave-anti-aliased.gif',
+      width: '300px',
+      margin: defaults.image.margin,
+    },
+    content: [],
+  },
+  {
+    id: 'b6e89a31-af03-4284-a77b-42ab5c95ad82',
+    type: 'subtitle',
+    properties: {
+      text: 'Single wave animated and anti-aliased',
       ...defaults.subtitle,
     },
     content: [],
@@ -290,7 +341,7 @@ const blocks = [
     id: '7990f5cf-bd2e-4a2c-b200-a0d18e069938',
     type: 'text',
     properties: {
-      text: 'Adding another wave at a different frame to create the infinite loop effect:',
+      text: 'Adding another shifted wave animation in a way that when the first is starting, the second is in middle, when the first is in the middle, the second is at the end and finally when the first is finishing, the second is at the beginning. By repeating this entire animation once it finishes, it creates an infinite loop effect:',
       ...defaults.text,
     },
     content: [],
@@ -299,8 +350,9 @@ const blocks = [
     id: '61a9f43e-2a96-4bf4-9aa9-84df6e10e587',
     type: 'image',
     properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
-      ...defaults.image,
+      path: '/static/collections/lively-waves/wave-perfecto.gif',
+      width: '300px',
+      margin: defaults.image.margin,
     },
     content: [],
   },
@@ -317,7 +369,7 @@ const blocks = [
     id: 'e48a4084-8304-4b09-8e66-0fa0544428f4',
     type: 'text',
     properties: {
-      text: 'For the animated border, we first generate a list of points and group them in a way that each group represents a small bar of the border:',
+      text: 'For the animated border, we\'ll cover the implementation later in another page, but the final animated border:',
       ...defaults.text,
     },
     content: [],
@@ -326,7 +378,7 @@ const blocks = [
     id: 'ff054b8f-73b9-4b24-ae4d-bc9b6288a5f2',
     type: 'image',
     properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
+      path: '/static/collections/lively-waves/border.gif',
       ...defaults.image,
     },
     content: [],
@@ -335,71 +387,7 @@ const blocks = [
     id: 'e979afa9-899c-4ed6-9b59-3d1f0ddc736e',
     type: 'subtitle',
     properties: {
-      text: 'Group of points to draw border',
-      ...defaults.subtitle,
-    },
-    content: [],
-  },
-  {
-    id: '56740e01-624c-4135-a493-9aa6777c2312',
-    type: 'text',
-    properties: {
-      text: 'So it\'s a matter of selecting X groups each frame where each group is painted with a color generated by the **Color** Interpolation** the same way that we create a fading circle, we create a fading bar',
-      ...defaults.text,
-    },
-    content: [],
-  },
-  {
-    id: '2103a35d-0865-4d55-b295-011246a85b5d',
-    type: 'stack',
-    properties: {
-      ...defaults.stack,
-    },
-    content: [
-      'da4897aa-99e0-464f-9620-b8cc51a47f34',
-    ],
-  },
-  {
-    id: 'da4897aa-99e0-464f-9620-b8cc51a47f34',
-    type: 'image',
-    properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
-      ...defaults.image,
-    },
-    content: [],
-  },
-  {
-    id: 'f27ecb15-f17f-411c-bd6a-115bdc0fdf1f',
-    type: 'subtitle',
-    properties: {
-      text: 'Frames of animated border',
-      ...defaults.subtitle,
-    },
-    content: [],
-  },
-  {
-    id: 'c1a25c00-cc50-4984-9166-bca3fb3a33fc',
-    type: 'text',
-    properties: {
-      text: 'Also using **Layers** and **Gif** we generate individual layers to combine later on in the resulting gif:',
-      ...defaults.text,
-    },
-    content: [],
-  },
-  {
-    id: 'ab70f989-9a59-47d6-9235-26cdeaecbcc2',
-    type: 'image',
-    properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
-      ...defaults.image,
-    },
-    content: [],
-  },
-  {
-    id: 'a125b764-2668-46b8-b829-cde52501382f',
-    type: 'subtitle',
-    properties: {
-      text: 'Border animated',
+      text: 'Animated border',
       ...defaults.subtitle,
     },
     content: [],
@@ -408,7 +396,7 @@ const blocks = [
     id: '361edf94-416a-4543-aeb2-2135831e8dc3',
     type: 'text',
     properties: {
-      text: 'Having all pieces, we can use the **Merge** building block to combine each individual frame at X and them create our final and beautiful NFT:',
+      text: 'Having all pieces, we can use the **Merge** building block to combine each individual frame at X and them create our final and beautiful animated image:',
       ...defaults.text,
     },
     content: [],
@@ -418,7 +406,8 @@ const blocks = [
     type: 'image',
     properties: {
       path: '/static/collections/four-corners/problem_p0.png',
-      ...defaults.image,
+      width: '300px',
+      margin: defaults.image.margin,
     },
     content: [],
   },
