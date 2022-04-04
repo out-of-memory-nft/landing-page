@@ -11,6 +11,7 @@ import BBox from './generic/BBox';
 
 import {
   BAvailableOnOpenSea,
+  BNFTMarketing,
 } from './custom';
 
 export { default as Block } from './Block';
@@ -27,3 +28,4 @@ addBlock('stack', BStack);
 addBlock('box', BBox);
 
 addBlock('available-on-open-sea', BAvailableOnOpenSea);
+addBlock('nft-marketing', BNFTMarketing);

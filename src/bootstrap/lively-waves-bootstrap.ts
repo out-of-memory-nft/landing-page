@@ -12,6 +12,7 @@ const blocks = [
       'e16ff718-2f4d-41f6-ad5b-62f5b0f9c354',
       '5c875b42-ef8a-4104-bb7f-6e02092ebb17',
       'b04aafd8-16ef-49f2-8f1a-d1a85f3c723b',
+      '9c08fa22-4cc6-4d00-935b-13bdd98ae9f5',
     ],
   },
   {
@@ -537,7 +538,21 @@ const blocks = [
     type: 'box',
     properties: {
       width: '100%',
-      height: '100px',
+      height: '200px',
+    },
+    content: [],
+  },
+  {
+    id: '9c08fa22-4cc6-4d00-935b-13bdd98ae9f5',
+    type: 'nft-marketing',
+    properties: {
+      data: [
+        {
+          name: 'NFT Calendar',
+          imageFile: 'nft-calendar.png',
+          url: 'https://nftcalendar.io/event/four-corners-vintage-by-outofmemorynft/'
+        }
+      ],
     },
     content: [],
   }
