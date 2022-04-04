@@ -15,6 +15,7 @@ const defaults = {
     align: 'justify',
   },
   stack: {
+    margin: '30px 0 10px 0',
     direction: 'row',
     spacing: 2,
   }

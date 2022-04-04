@@ -58,7 +58,7 @@ const blocks = [
     id: '23210613-17c7-48ce-b360-196b430c3f75',
     type: 'text',
     properties: {
-      text: '*Lively Waves is an animated collection where a strong small colorful circle starts at the center and slowly grows until eventually fade out and a new one starts the infinite cicle. A small amount of special NFT contains a compelling golden animated border*',
+      text: '*Lively Waves is an animated collection where a strong small colorful circle starts at the center and slowly grows until eventually fade out restarting the loop cycle. A small amount of special NFT contains a compelling golden animated border*',
       margin: '10px 0',
       align: 'justify',
     },
@@ -201,7 +201,7 @@ const blocks = [
     id: '9f12e853-7566-41ef-a236-acc73279d075',
     type: 'text',
     properties: {
-      text: 'As our coordinate system starts at the top-left and we want to draw the circle in the center of the image, we need to transpose the center of our circle to the center of the image by modifying it like (s/2 + x)² + (s/2 + y)² = r² where *s* is the side of the image.',
+      text: 'As our coordinate system starts at the top-left and we want to draw the circle in the center of the image, we need to transpose the center of our circle to the center of the image by modifying it like (s/2 + x)² + (s/2 + y)² <= r² where *s* is the side of the image.',
       ...defaults.text,
     },
     content: [],
@@ -210,7 +210,7 @@ const blocks = [
     id: 'a7b4d781-5f00-48d1-bcdb-e31ae945f84f',
     type: 'text',
     properties: {
-      text: 'The equation draws the circle border but we want to draw a filled circle, so we need to add it resulting in the final equation (s/2 + x)² + (s/2 + y)² <= r². We can translate it as: *given a radius, fill every pixel with coordinates (x,y) where the equation is true*. With this **Circle** building block, we can generate many circles like these:',
+      text: 'We can translate it as: *given a radius, fill every pixel with coordinates (x,y) where the equation is true*. This is our new **Circle** building block which we can use to generate many circles like these:',
       ...defaults.text,
     },
     content: [],
@@ -223,15 +223,44 @@ const blocks = [
     },
     content: [
       'b5db8bff-d5ba-4d32-8c6d-06230c2e135c',
+      'f2066043-c149-4d21-8b5f-9f384d45eb65',
+      'fd2a9678-ffe7-453a-9b53-6358bec00fa7',
+      '95c8ec42-1a3c-44a9-aa32-9115c2effe71',
     ],
   },
   {
     id: 'b5db8bff-d5ba-4d32-8c6d-06230c2e135c',
     type: 'image',
     properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
+      path: '/static/collections/lively-waves/circle_simple_0.png',
       width: defaults.image.width,
-      height: defaults.image.height,
+    },
+    content: [],
+  },
+  {
+    id: 'f2066043-c149-4d21-8b5f-9f384d45eb65',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/circle_simple_1.png',
+      width: defaults.image.width,
+    },
+    content: [],
+  },
+  {
+    id: 'fd2a9678-ffe7-453a-9b53-6358bec00fa7',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/circle_simple_2.png',
+      width: defaults.image.width,
+    },
+    content: [],
+  },
+  {
+    id: '95c8ec42-1a3c-44a9-aa32-9115c2effe71',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/circle_simple_3.png',
+      width: defaults.image.width,
     },
     content: [],
   },
@@ -261,14 +290,44 @@ const blocks = [
     },
     content: [
       'b4c297eb-6722-4f03-92a5-cd8f491bddfc',
+      'c388e798-d851-4e90-920d-a08107248846',
+      '0e18dda8-253a-4eac-a528-3ad7dee16c39',
+      '8855148d-486e-4e35-a68f-fd8375a2818f',
     ],
   },
   {
     id: 'b4c297eb-6722-4f03-92a5-cd8f491bddfc',
     type: 'image',
     properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
-      ...defaults.image,
+      path: '/static/collections/lively-waves/circle_color_0.png',
+      width: defaults.image.width,
+    },
+    content: [],
+  },
+  {
+    id: 'c388e798-d851-4e90-920d-a08107248846',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/circle_color_1.png',
+      width: defaults.image.width,
+    },
+    content: [],
+  },
+  {
+    id: '0e18dda8-253a-4eac-a528-3ad7dee16c39',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/circle_color_2.png',
+      width: defaults.image.width,
+    },
+    content: [],
+  },
+  {
+    id: '8855148d-486e-4e35-a68f-fd8375a2818f',
+    type: 'image',
+    properties: {
+      path: '/static/collections/lively-waves/circle_color_3.png',
+      width: defaults.image.width,
     },
     content: [],
   },
@@ -313,7 +372,7 @@ const blocks = [
     id: '436182ae-4e68-40b3-9bc3-e58b3b601f85',
     type: 'text',
     properties: {
-      text: 'If we take a closer look, we can notice a rough edge on the circle because in high quality images, this kind of curved edge has a smooth color transition achieved by applying a technique called anti-aliasing. In order to achieve this, we simply generate a bigger image and resize it to the desired size:',
+      text: 'If we take a closer look, we can notice a rough edge on the circle. In high quality images, this kind of curved edge has a smooth color transition achieved by applying a technique called anti-aliasing. In order to achieve this, we simply generate a bigger image and resize it to the desired size:',
       ...defaults.text,
     },
     content: [],
@@ -405,7 +464,7 @@ const blocks = [
     id: '4ce7e597-2ad1-459d-9636-56a87b907504',
     type: 'image',
     properties: {
-      path: '/static/collections/four-corners/problem_p0.png',
+      path: '/static/collections/lively-waves/wave-final.gif',
       width: '300px',
       margin: defaults.image.margin,
     },
