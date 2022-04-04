@@ -535,10 +535,10 @@ const blocks = [
   },
   {
     id: '0a196e1b-7941-4f2f-a896-098ad1d14aa4',
-    type: 'box',
+    type: 'divider',
     properties: {
-      width: '100%',
-      height: '200px',
+      text: 'End - Lively Waves',
+      margin: '160px 0 40px 0',
     },
     content: [],
   },

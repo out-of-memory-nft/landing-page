@@ -10,6 +10,10 @@ import BStack from './generic/BStack';
 import BBox from './generic/BBox';
 
 import {
+  BDivider,
+} from './generic';
+
+import {
   BAvailableOnOpenSea,
   BNFTMarketing,
 } from './custom';
@@ -26,6 +30,7 @@ addBlock('container', BContainer);
 addBlock('subtitle', BSubtitle);
 addBlock('stack', BStack);
 addBlock('box', BBox);
+addBlock('divider', BDivider);
 
 addBlock('available-on-open-sea', BAvailableOnOpenSea);
 addBlock('nft-marketing', BNFTMarketing);
