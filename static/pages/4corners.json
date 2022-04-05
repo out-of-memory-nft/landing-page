@@ -1,8 +1,10 @@
 {
   "title": "Four Corners Vintage",
+  "titleShort": "4Corners",
   "openSeaTarget": "collection/4-corners-vintage",
-  "learnMore": "/collections/four-corners-vintage",
+  "learnMore": "four-corners-vintage",
   "image": "/static/collections/4c_banner.png",
   "summary": "Four Corners Vintage starts with a black filled background where four randomized colors at each corner starts and gently fades away as far as you go from it creating a gradient effect which is them framed by a nice and beautiful golden border.",
-  "techniques": ["Pixel paint", "Color interpolation", "Layers", "Rotation"]
+  "techniques": ["Pixel paint", "Color interpolation", "Layers", "Rotation"],
+  "blockId": "29f856fe-11d2-426b-b68d-90480257c994"
 }
