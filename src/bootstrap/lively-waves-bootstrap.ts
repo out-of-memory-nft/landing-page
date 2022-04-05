@@ -520,7 +520,7 @@ const blocks = [
     id: 'df723d60-9eaf-4d39-b777-e8407ef9ddbd',
     type: 'available-on-open-sea',
     properties: {
-      target: 'collection/4-corners-vintage',
+      target: 'collection/lively-waves',
     },
     content: [],
   },
