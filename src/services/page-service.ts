@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const pages = [
+  'lywaves',
   '4corners',
 ];
 
