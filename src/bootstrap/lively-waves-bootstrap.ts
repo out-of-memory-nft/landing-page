@@ -550,7 +550,14 @@ const blocks = [
         {
           name: 'NFT Calendar',
           imageFile: 'nft-calendar.png',
-          url: 'https://nftcalendar.io/event/four-corners-vintage-by-outofmemorynft/'
+          height: '150px',
+          url: 'https://nftcalendar.io/event/lively-waves-by-outofmemorynft/'
+        },
+        {
+          name: 'The NFT Meter',
+          imageUrl: 'https://thenftmeter.com/img/nfts.7b9f3f8f.png',
+          height: '150px',
+          url: 'https://thenftmeter.com/lively-waves-by-outofmemorynft',
         }
       ],
     },
